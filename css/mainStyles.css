@@ -1,64 +1,70 @@
-* {
-    box-sizing: border-box;
+body {
+    background-color: #556AA3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
 }
 
-body {
-    font-family: Arial, sans-serif;
+input {
+    width: 560px;
+    height: 100px;
+    background-color: #181F32;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-family: "Unbounded";
+    font-size: 50px;
+    padding-left: 10px;
+    color: white;
+}
+
+.containerButtons {
+    background-color: #313E64;
+    width: auto;
+    height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
+    flex-direction: column;
+    gap: 40px;
+    padding: 45px;
+    border-radius: 20px;
+}
+
+.containerButtons button {
+    background-color: #FFEDD1;
+    width: 90px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 0px rgb(255, 230, 191, 1), 
+                1px 15px 0px rgba(0, 0, 0, 0.3); 
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-family: "Unbounded";
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.containerButtons button:active {
+    background-color: #ffd490; 
+}
+
+.equalButton button {
+    width: 480px;
+    height: 60px;
+    background-color: #FF5252;
+    box-shadow: 0px 7px 0px #F1424C, 
+                1px 15px 0px rgba(0, 0, 0, 0.3); 
+}
+
+.containerButtons div {
+    display: flex;
+    gap: 30px;
 }
 
 .calculator {
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-.calculator-screen {
-    width: 100%;
-    height: 80px;
-    border: none;
-    background-color: #252525;
-    color: #fff;
-    text-align: right;
-    padding-right: 20px;
-    padding-left: 20px;
-    font-size: 2.2rem;
-}
-
-button {
-    height: 60px;
-    font-size: 1.4rem;
-}
-
-.operator {
-    background-color: #f1a33c;
-    color: white;
-}
-
-.operator:hover {
-    background-color: #f1a33cdd;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.all-clear {
-    background-color: #ff6347;
-    color: white;
-}
-
-.all-clear:hover {
-    background-color: #ff6347dd;
-}
-
-.calculator-keys {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 70px;
 }
