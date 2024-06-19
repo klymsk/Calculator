@@ -12,38 +12,58 @@
 </head>
 <body>
     <div class="calculator">
-        <input type = "text" placeholder = "0">
+        <input type = "text" id="display" placeholder = "0">
 
-        <div>
-            <button>AC</button>
-            <button>%</button>
-            <button>/</button>
-            <button>Del</button>
-        </div>
-        <div>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
-        </div>
-        <div>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
-        </div>
-        <div>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>*</button>
-        </div>
-        <div>
-            <button>00</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
+        <div class="containerButtons">
+            <div>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class = "clearButton">AC</button>
+            </div>
+            <div>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>+</button>
+            </div>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>-</button>
+            </div>
+            <div>
+                <button>.</button>
+                <button>0</button>
+                <button>/</button>
+                <button>x</button>
+            </div>
+            <div class = "equalButton">
+                <button>=</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const display = document.getElementById('display');
+            const buttons = document.querySelectorAll('.containerButtons button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent;
+                    
+                    if (buttonText === 'AC') {
+                        display.value = ''; // Очистить дисплей
+                    } else if (buttonText === '=') {
+                        display.value = eval(display.value.replace('x', '*')); // Выполнить расчет
+                    } else {
+                        display.value += buttonText; // Добавить текст кнопки на дисплей
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
