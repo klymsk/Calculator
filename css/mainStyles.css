@@ -6,6 +6,11 @@ body {
     margin-top: 150px;
 }
 
+.theme-switch button {
+    font-family: "Unbounded";
+    font-size: 10px;
+}
+
 input {
     width: 560px;
     height: 100px;
@@ -17,6 +22,7 @@ input {
     font-size: 50px;
     padding-left: 10px;
     color: white;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .containerButtons {
@@ -28,6 +34,7 @@ input {
     gap: 40px;
     padding: 45px;
     border-radius: 20px;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .containerButtons button {
@@ -55,6 +62,20 @@ input {
     background-color: #FF5252;
     box-shadow: 0px 7px 0px #F1424C, 
                 1px 15px 0px rgba(0, 0, 0, 0.3); 
+}
+
+.equalButton button:active {
+    background-color: #F1424C; 
+}
+
+.containerButtons .clearButton button {
+    background-color: #4D67AC;
+    box-shadow: 0px 7px 0px #365199, 
+                1px 15px 0px rgba(0, 0, 0, 0.3); 
+}
+
+.containerButtons .clearButton button:active {
+    background-color: #365199; 
 }
 
 .containerButtons div {
