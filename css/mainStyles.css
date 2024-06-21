@@ -11,6 +11,24 @@ body {
     font-size: 10px;
 }
 
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .calculator {
+    background-color: #f0f0f0;
+}
+
+.dark-theme {
+    background-color: #313E64;
+    color: #FFEDD1;
+}
+
+.dark-theme .calculator {
+    background-color: #3E4A6B;
+}
+
 input {
     width: 560px;
     height: 100px;
