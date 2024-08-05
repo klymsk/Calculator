@@ -6,9 +6,40 @@ body {
     margin-top: 150px;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 280px;
+}
+
 .theme-switch button {
     font-family: "Unbounded";
-    font-size: 10px;
+    font-size: 9px;
+    font-weight: 300;
+    color: white;
+    width: 95px;
+    height: 30px;
+    background-color: #171F32;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: none; 
+}
+
+.theme-switch .res-button {
+    width: 30px;
+}
+
+.theme-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonLogo {
+    font-family: "Unbounded";
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
 }
 
 .light-theme {
@@ -26,7 +57,7 @@ body {
 }
 
 .dark-theme .calculator {
-    background-color: #3E4A6B;
+    background-color: #313E64;
 }
 
 input {
@@ -99,6 +130,10 @@ input {
 .containerButtons div {
     display: flex;
     gap: 30px;
+}
+
+.dark-theme .containerButtons {
+    background-color: #3c4d81;
 }
 
 .calculator {
